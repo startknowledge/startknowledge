@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StartKnowledge Premium</title>
+  <style>
+    body{font-family:Arial;background:#0b1220;color:#fff;text-align:center;padding:40px}
+    .card{max-width:720px;margin:auto;background:#111a33;border-radius:14px;padding:28px}
+    h1{margin-bottom:6px}
+    .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:18px}
+    .plan{background:#0f1a3d;border:1px solid #1e2a63;border-radius:12px;padding:18px}
+    .price{font-size:28px;font-weight:700}
+    button{margin-top:10px;padding:12px 18px;border:0;border-radius:10px;background:#4f7cff;color:#fff;font-size:16px;cursor:pointer}
+    button:hover{background:#3c66e8}
+    .ok{display:none;margin-top:16px;background:#0d3;padding:12px;border-radius:10px;color:#012}
+    .note{opacity:.8;font-size:12px;margin-top:8px}
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>StartKnowledge Premium</h1>
+  <p>One-time purchase — Unlock premium tools instantly</p>
+
+  <div class="plans">
+    <div class="plan">
+      <div class="price">₹99</div>
+      <div>Starter Tool</div>
+      <button onclick="pay(99)">Pay ₹99</button>
+    </div>
+    <div class="plan">
+      <div class="price">₹199</div>
+      <div>Premium Tool</div>
+      <button onclick="pay(199)">Pay ₹199</button>
+    </div>
+    <div class="plan">
+      <div class="price">₹299</div>
+      <div>Pro Tool</div>
+      <button onclick="pay(299)">Pay ₹299</button>
+    </div>
+  </div>
+
+  <div id="ok" class="ok">🎉 Payment Successful! Premium unlocked.</div>
+  <div class="note">Secure payments via Razorpay</div>
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  const RZP_KEY = "rzp_live_SA4cGOsrHNdxX3"; // your LIVE Key ID
+
+  function pay(amount){
+    const orderId = "SK_" + Date.now(); // simple unique reference
+
+    const options = {
+      key: RZP_KEY,
+      amount: amount * 100, // paise
+      currency: "INR",
+      name: "StartKnowledge",
+      description: "Premium Access",
+      handler: function (response) {
+        // Store a temp flag (final verify webhook se hoga)
+        localStorage.setItem("sk_premium", "true");
+        localStorage.setItem("sk_payment_id", response.razorpay_payment_id);
+        document.getElementById("ok").style.display = "block";
+      },
+      notes: { order_ref: orderId },
+      theme: { color: "#4f7cff" }
+    };
+
+    new Razorpay(options).open();
+  }
+
+  // Auto-unlock on return visit (frontend convenience)
+  if(localStorage.getItem("sk_premium")==="true"){
+    document.getElementById("ok").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
