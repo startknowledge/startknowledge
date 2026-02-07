@@ -43,15 +43,11 @@ a {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-
-
 .header-section {
   padding-bottom: 50px;
   background-color: #c1edc8;
   width: 100%;
 }
-
-
 .header {
   color: var(--tertiary);
   background-color: #D7F5DC;
@@ -60,7 +56,6 @@ a {
   z-index: 997;
   height: 6rem;
 }
-
 .header .logo {
   line-height: 1;
 }
@@ -76,6 +71,10 @@ a {
   font-weight: 700;
   color: var(--primary);
 }
+h6 {
+  text-align: left;
+}
+
 
 @media (max-width: 480px) {
   .header .logo img {
