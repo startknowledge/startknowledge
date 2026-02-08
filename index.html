@@ -64,42 +64,47 @@
      crossorigin="anonymous"></script>
   <!-- HOME PAGE – Organization + Website + Breadcrumb -->
   <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@graph": [
-  {
-  "@type": "Organization",
-  "@id": "https://www.startknowledge.in/#organization",
-  "name": "ClientKnowledge",
-  "url": "https://www.startknowledge.in/",
-  "logo": "https://www.startknowledge.in/assets/logo.png",
-  "description": "ClientKnowledge provides smart digital solutions to help businesses grow, attract customers, and increase revenue.",
-  "sameAs": [
-  "https://www.facebook.com/",
-  "https://www.twitter.com/",
-  "https://www.linkedin.com/"
-  ]
-  },
-  {
-  "@type": "WebSite",
-  "@id": "https://www.startknowledge.in/#website",
-  "url": "https://www.startknowledge.in/",
-  "name": "ClientKnowledge",
-  "publisher": {
-  "@id": "https://www.startknowledge.in/#organization"
-  }
-  },
-  {
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-  "@type": "ListItem",
-  "position": 1,
-  "name": "Home",
-  "item": "https://www.startknowledge.in/"
-  }]
-  }
-  ]
-  }
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.startknowledge.in/#organization",
+          "name": "ClientKnowledge",
+          "url": "https://www.startknowledge.in/",
+          "logo": "https://www.startknowledge.in/assets/images/logo.png",
+          "description": "ClientKnowledge provides smart digital solutions to help businesses grow, attract customers, and increase revenue.",
+          "sameAs": [
+            "https://www.facebook.com/",
+            "https://www.twitter.com/",
+            "https://www.linkedin.com/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.startknowledge.in/#website",
+          "url": "https://www.startknowledge.in/",
+          "name": "ClientKnowledge",
+          "publisher": {
+            "@id": "https://www.startknowledge.in/#organization"
+            }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.startknowledge.in/#breadcrumb",
+          "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": {
+              "@id": "https://www.startknowledge.in/"
+              }
+            }
+          ]
+        }
+      ]
+    }
   </script>
 
 </head>  

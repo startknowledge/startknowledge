@@ -42,38 +42,44 @@
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="icon" href="favicon.ico">
 
-  <!--PRIVACY + WebPage + Breadcrumb-->
-  <script type="application/ld+json">
-  {
+  <!-- PRIVACY POLICY PAGE – WebPage + Breadcrumb -->
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
-  {
-  "@type": "WebPage",
-  "@id": "https://www.startknowledge.in/privacy.html#webpage",
-  "url": "https://www.startknowledge.in/privacy.html",
-  "name": "Privacy Policy - ClientKnowledge",
-  "description": "Read the privacy policy of ClientKnowledge."
-  },
-  {
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-  {
-  "@type": "ListItem",
-  "position": 1,
-  "name": "Home",
-  "item": "https://www.startknowledge.in/"
-  },
-  {
-  "@type": "ListItem",
-  "position": 2,
-  "name": "Privacy Policy",
-  "item": "https://www.startknowledge.in/privacy.html"
-  }
+    {
+      "@type": "WebPage",
+      "@id": "https://www.startknowledge.in/privacy.html#webpage",
+      "url": "https://www.startknowledge.in/privacy.html",
+      "name": "Privacy Policy - ClientKnowledge",
+      "description": "Read the privacy policy of ClientKnowledge."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.startknowledge.in/privacy.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": {
+            "@id": "https://www.startknowledge.in/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Privacy Policy",
+          "item": {
+            "@id": "https://www.startknowledge.in/privacy.html"
+          }
+        }
+      ]
+    }
   ]
-  }
-  ]
-  }
-  </script>
+}
+</script>
+
 
 </head>
 <body>

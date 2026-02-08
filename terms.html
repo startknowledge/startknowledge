@@ -41,38 +41,44 @@
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="icon" href="favicon.ico">
 
-  <!--TERMS + WebPage + Breadcrumb-->
-  <script type="application/ld+json">
-  {
+  <!-- TERMS & CONDITIONS PAGE – WebPage + Breadcrumb -->
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
-  {
-  "@type": "WebPage",
-  "@id": "https://www.startknowledge.in/terms.html#webpage",
-  "url": "https://www.startknowledge.in/terms.html",
-  "name": "Terms and Conditions - ClientKnowledge",
-  "description": "Read the Terms and Conditions of ClientKnowledge."
-  },
-  {
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-  {
-  "@type": "ListItem",
-  "position": 1,
-  "name": "Home",
-  "item": "https://www.startknowledge.in/"
-  },
-  {
-  "@type": "ListItem",
-  "position": 2,
-  "name": "Terms and Conditions",
-  "item": "https://www.startknowledge.in/terms.html"
-  }
+    {
+      "@type": "WebPage",
+      "@id": "https://www.startknowledge.in/terms.html#webpage",
+      "url": "https://www.startknowledge.in/terms.html",
+      "name": "Terms and Conditions - ClientKnowledge",
+      "description": "Read the Terms and Conditions of ClientKnowledge."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.startknowledge.in/terms.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": {
+            "@id": "https://www.startknowledge.in/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Terms and Conditions",
+          "item": {
+            "@id": "https://www.startknowledge.in/terms.html"
+          }
+        }
+      ]
+    }
   ]
-  }
-  ]
-  }
-  </script>
+}
+</script>
+
 </head>
 <body>
 

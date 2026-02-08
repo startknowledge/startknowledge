@@ -41,31 +41,60 @@
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="icon" href="favicon.ico">
 
-  <!--FAQ PAGE – FAQPage + Breadcrumb-->
-  <script type="application/ld+json">
-  {
+  <!-- FAQ PAGE – FAQPage + Breadcrumb -->
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-  {
-  "@type": "Question",
-  "name": "What services does ClientKnowledge provide?",
-  "acceptedAnswer": {
-  "@type": "Answer",
-  "text": "ClientKnowledge provides digital marketing, web development, SEO, and business growth solutions."
-  }
-  },
-  {
-  "@type": "Question",
-  "name": "How can I contact ClientKnowledge?",
-  "acceptedAnswer": {
-  "@type": "Answer",
-  "text": "You can contact us through our website contact page or email support."
-  }
-  }
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.startknowledge.in/faq.html#faq",
+      "url": "https://www.startknowledge.in/faq.html",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What services does ClientKnowledge provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ClientKnowledge provides digital marketing, web development, SEO, and business growth solutions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact ClientKnowledge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can contact us through our website contact page or email support."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.startknowledge.in/faq.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": {
+            "@id": "https://www.startknowledge.in/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "FAQ",
+          "item": {
+            "@id": "https://www.startknowledge.in/faq.html"
+          }
+        }
+      ]
+    }
   ]
-  }
-  </script>
+}
+</script>
+
 
 </head>
 <body>

@@ -43,37 +43,44 @@
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
 
   <!--ABOUT PAGE – AboutPage + Breadcrumb-->
-  <script type="application/ld+json">
-  {
+  <!-- ABOUT PAGE – AboutPage + Breadcrumb -->
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
-  {
-  "@type": "AboutPage",
-  "@id": "https://www.startknowledge.in/about.html#about",
-  "url": "https://www.startknowledge.in/about.html",
-  "name": "About ClientKnowledge",
-  "description": "Learn more about ClientKnowledge, our mission, values, and digital growth solutions."
-  },
-  {
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-  {
-  "@type": "ListItem",
-  "position": 1,
-  "name": "Home",
-  "item": "https://www.startknowledge.in/"
-  },
-  {
-  "@type": "ListItem",
-  "position": 2,
-  "name": "About",
-  "item": "https://www.startknowledge.in/about.html"
-  }
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.startknowledge.in/about.html#about",
+      "url": "https://www.startknowledge.in/about.html",
+      "name": "About ClientKnowledge",
+      "description": "Learn more about ClientKnowledge, our mission, values, and digital growth solutions."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.startknowledge.in/about.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": {
+            "@id": "https://www.startknowledge.in/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": {
+            "@id": "https://www.startknowledge.in/about.html"
+          }
+        }
+      ]
+    }
   ]
-  }
-  ]
-  }
-  </script>
+}
+</script>
+
 
 </head>
 <body>
