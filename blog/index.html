@@ -324,14 +324,30 @@
       color: var(--primary-dark);
     }
     /* Affiliate section – colorful */
-    .affiliate-section {
-      background: linear-gradient(135deg, rgba(108,92,231,0.1), rgba(0,206,201,0.05));
-      backdrop-filter: blur(8px);
-      border-radius: 48px;
-      padding: 48px 32px;
-      margin: 50px 0;
-      border: 1px solid rgba(108,92,231,0.3);
-    }
+    . .affiliate-section {
+  background: linear-gradient(135deg, rgba(108,92,231,0.1), rgba(0,206,201,0.05));
+  backdrop-filter: blur(8px);
+  border-radius: 48px;
+  padding: 48px 32px;
+  margin: 50px auto;
+  border: 1px solid rgba(108,92,231,0.3);
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.affiliate-section .container {
+  margin: 0 auto;
+  text-align: center;
+}
+.affiliate-section {
+  text-align: center;
+}
+.affiliate-section h2 {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
     .mini-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
