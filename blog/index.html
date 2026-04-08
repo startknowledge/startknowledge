@@ -39,6 +39,7 @@
       line-height: 1.5;
       overflow-x: hidden;
     }
+    
     /* Animated background shapes */
     .bg-shapes {
       position: fixed;
@@ -72,15 +73,32 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 4px;
     }
     .header-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-      gap: 20px;
-    }
+  display: flex;
+  justify-content: center; /* replaces space-between */
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 18px 0;
+  gap: 20px;
+}
+.header-inner > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+    
     .logo h1 {
       font-size: 1.7rem;
       font-weight: 800;
@@ -456,10 +474,7 @@
 </div>
 <header class="site-header">
   <div class="container header-inner">
-    <div class="logo">
-      <h1>⚡ ultra-static-seo-engine</h1>
-      <span>programmatic · automated · infinite scale · multi‑language</span>
-    </div>
+    
     <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
@@ -482,6 +497,10 @@
         <button class="lang-btn" data-lang="fr">FR</button>
         <button class="lang-btn" data-lang="hi">हिंदी</button>
       </div>
+      <div class="logo">
+      <h1>⚡ ultra-static-seo-engine</h1>
+      <span>programmatic · automated · infinite scale · multi‑language</span>
+    </div>
     </div>
   </div>
 </header>
